@@ -1,0 +1,24 @@
+program PG3 ;
+begin data int32 AA0 , BB0 , ZZ0 , XX0 , YY0 ;
+  get ( AA0 )
+  get ( BB0 )
+
+  AA0 :> ZZ0
+  while ZZ0 lt BB0 add 1 {
+    write ( ZZ0 * ZZ0 )
+	ZZ0 add 1 :> ZZ0
+  }
+  
+  0 :> XX0
+  1 :> ZZ0
+  while ZZ0 lt AA0 add 1 {
+    1 :> ZZ0
+    while ZZ0 lt BB0 add 1 {
+      XX0 add 1 :> XX0
+	  ZZ0 add 1 :> ZZ0
+	}
+	ZZ0 add 1 :> ZZ0
+  }
+  write ( XX0 )
+
+end
