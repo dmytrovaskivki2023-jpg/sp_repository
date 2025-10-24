@@ -1,0 +1,18 @@
+program PG1 ; 
+begin data int32 AA0 , BB0 , XX0 , YY0 ;
+  get ( AA0 );
+  get ( BB0 );
+  
+  write ( AA0 add BB0 );
+  write ( AA0 sub BB0 );
+  write ( AA0 * BB0 );
+  write ( AA0 / BB0 );
+  write ( AA0 % BB0 );
+
+  (AA0 sub BB0) * 10 add (AA0 add BB0) / 10 :> XX0;
+  XX0 add XX0 % 10 :> YY0;
+
+  write ( XX0 );
+  write ( YY0 );
+
+end
